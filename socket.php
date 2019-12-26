@@ -26,7 +26,7 @@ socket_set_nonblock ( $socket );
 $clients = array ();
 while ( TRUE ) {
 	if ($c = socket_accept ( $socket )) {
-		echo "nouvelle connexion \n";
+		echo "nouvelle connexion de ". $socket. "\n";
 		// Passage en mode non bloquant de la socket du client
 		socket_set_nonblock ( $c );
 		// Ajout de la socket cliente au tableau

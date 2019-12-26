@@ -32,7 +32,7 @@ int main(void)
 
     SOCKET sock;
     SOCKADDR_IN sin;
-    char hello[50] = "Salut je suis le client";
+    char hello[50] = "";
 
     if(!erreur)
     {
