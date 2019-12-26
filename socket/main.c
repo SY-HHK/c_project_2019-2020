@@ -32,7 +32,7 @@ int main(void)
 
     SOCKET sock;
     SOCKADDR_IN sin;
-    char hello[20] = "Salut je suis le client";
+    char hello[50] = "Salut je suis le client";
 
     if(!erreur)
     {
@@ -47,6 +47,11 @@ int main(void)
         /* Si le client arrive à se connecter */
         if(connect(sock, (SOCKADDR*)&sin, sizeof(sin)) != SOCKET_ERROR) {
             printf("Connexion à %s sur le port %d\n", inet_ntoa(sin.sin_addr), htons(sin.sin_port));
+            printf("Entrez le messages à envoyer ?");
+            fflush(stdin);
+            fgets(hello,50,stdin);
+            if(hello[strlen(hello)-1] == "\n")
+            hello[strlen(hello)-1] = "\0";
             send(sock,hello,strlen(hello),MSG_CONFIRM);
         }
         else
