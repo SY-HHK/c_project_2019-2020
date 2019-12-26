@@ -32,6 +32,7 @@ int main(void)
 
     SOCKET sock;
     SOCKADDR_IN sin;
+    char hello[20] = "Salut je suis le client";
 
     if(!erreur)
     {
@@ -44,8 +45,10 @@ int main(void)
         sin.sin_port = htons(PORT);
 
         /* Si le client arrive à se connecter */
-        if(connect(sock, (SOCKADDR*)&sin, sizeof(sin)) != SOCKET_ERROR)
+        if(connect(sock, (SOCKADDR*)&sin, sizeof(sin)) != SOCKET_ERROR) {
             printf("Connexion à %s sur le port %d\n", inet_ntoa(sin.sin_addr), htons(sin.sin_port));
+            send(sock,hello,strlen(hello),MSG_CONFIRM);
+        }
         else
             printf("Impossible de se connecter\n");
 
