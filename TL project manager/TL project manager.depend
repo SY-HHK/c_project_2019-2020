@@ -1,8 +1,15 @@
 # depslib dependency file v1.0
-1577458822 source:/home/hhk/Documents/c_project_2019-2020/TL project manager/main.c
+1577476705 source:/home/hhk/Documents/c_project_2019-2020/TL project manager/main.c
 	<stdlib.h>
 	<gtk/gtk.h>
-	<mysql/mysql.h>
+	<winsock2.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<stdio.h>
+	<stdlib.h>
 
 1559742361 /usr/include/gtk-3.0/gtk/gtk.h
 	<gdk/gdk.h>

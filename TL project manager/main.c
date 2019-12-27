@@ -24,9 +24,13 @@
 
 int main(int argc,char **argv)
 {
+char username[50] = "";
+char password[50] = "";
+int server_connect(GtkWidget *widget, GtkWidget *entry_username, char *username,char *password);
 GtkWidget *connexion_window = NULL;
 GtkWidget *cancel_button = NULL;
 GtkWidget *connection_button = NULL;
+GtkWidget *entry_username = NULL;
       GtkBuilder *builder = NULL;
       GError *error = NULL;
       gchar *filename = NULL;
@@ -56,6 +60,7 @@ GtkWidget *connection_button = NULL;
       connexion_window = GTK_WIDGET(gtk_builder_get_object (builder, "window_connexion"));
       cancel_button = GTK_WIDGET(gtk_builder_get_object (builder, "button_cancel"));
       connection_button = GTK_WIDGET(gtk_builder_get_object (builder, "button_connect"));
+      entry_username = GTK_WIDGET(gtk_builder_get_object(builder, "entry_username"));
 
     //création d'un socket
     #if defined (WIN32)
@@ -83,7 +88,6 @@ GtkWidget *connection_button = NULL;
         }
         else {
             printf("Impossible de se connecter\n");
-
         }
 
         /* On ferme la socket précédemment ouverte */
@@ -101,7 +105,8 @@ GtkWidget *connection_button = NULL;
       g_signal_connect (G_OBJECT (cancel_button), "clicked", (GCallback)gtk_main_quit, NULL);
 
       //envoie d'une demande de connexion
-      g_signal_connect (G_OBJECT (connection_button), "clicked", (GCallback)gtk_main_quit, NULL);
+      g_signal_connect (G_OBJECT (connection_button), "clicked", (GCallback)server_connect, entry_username);
+
 
 
       /* Affichage de la fenêtre principale. */
@@ -110,4 +115,18 @@ GtkWidget *connection_button = NULL;
       gtk_main();
 
       return 0;
+}
+
+
+int server_connect(GtkWidget *widget, GtkWidget *entry_username, char *username, char *password) {
+
+//send(sock,username,strlen(username),MSG_CONFIRM);
+//send(sock,password,strlen(password),MSG_CONFIRM);
+const gchar *entry_text;
+entry_text = gtk_entry_get_text(GTK_ENTRY (entry_username));
+printf("test %s \n",entry_text);
+
+
+
+return 0;
 }
