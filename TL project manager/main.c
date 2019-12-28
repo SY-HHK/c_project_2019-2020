@@ -135,7 +135,7 @@ void server_connect(GtkWidget *widget, struct connection_infos *infos) {
 
 const gchar *username;
 const gchar *password;
-char logins[100] = "logi:";
+char logins[100] = "login:";
 username = gtk_entry_get_text(GTK_ENTRY (infos->entry_username));
 password = gtk_entry_get_text(GTK_ENTRY (infos->entry_password));
 printf("%s %s \n",username,password);

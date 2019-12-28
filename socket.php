@@ -38,7 +38,7 @@ while ( TRUE ) {
 		if ($buf = socket_read ( $c, 2048 )) {
 			if(strstr($buf,"login:")) {
 				echo "Connection...\n";
-				$email_user = explode("&&&",explode("login:",$login));
+				$email_user = explode("&&&",explode("login:",$buf)[1]);
 				$password = $email_user[1]; echo $password;
 				$email_user = $email_user[0];
 				$stmt = $pdo->prepare("SELECT * FROM USER WHERE email_user = ? && password = ?");
