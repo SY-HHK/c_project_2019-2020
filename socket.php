@@ -37,10 +37,18 @@ while ( TRUE ) {
 		$c = $clients [$i];
 		if ($buf = socket_read ( $c, 2048 )) {
 			if(strstr($buf,"login:")) {
-				echo "oui login";
+				echo "Connection...\n";
+				$email_user = explode("&&&",explode("login:",$login));
+				$password = $email_user[1]; echo $password;
+				$email_user = $email_user[0];
+				$stmt = $pdo->prepare("SELECT * FROM USER WHERE email_user = ? && password = ?");
+				$stmt->execute(array($email_user,$password));
+				$login_accept = $stmt->rowCount();
+				if ($login_accept == 1) echo "Succesful ! \n";
+				else echo "Denied ! wrong mail or password; \n";
 			}
 			else {
-				echo "non login";
+				echo $buf."\n";
 			}
 		}
 	}
