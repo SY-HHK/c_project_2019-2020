@@ -1,4 +1,6 @@
 <?php
+include("config.php");
+
 //test des erreurs possibles
 if (($socket = socket_create_listen ( 1234 )) == FALSE) {
 	echo "socket_create_listen() a échoué : " . socket_strerror ( socket_last_error ($socket) ) . "\n";
