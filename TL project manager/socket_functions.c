@@ -48,7 +48,7 @@ void server_connect(GtkWidget *widget, struct connection_infos *infos) {
 
 const gchar *username;
 const gchar *password;
-const gchar *answer;
+char answer[10];
 char logins[100] = "login:";
 username = gtk_entry_get_text(GTK_ENTRY (infos->entry_username));
 password = gtk_entry_get_text(GTK_ENTRY (infos->entry_password));
@@ -56,7 +56,7 @@ strcat(logins,username);
 strcat(logins,"&&&");
 strcat(logins,password);
 send(infos->sock,logins,strlen(logins),NULL);
-recv(infos->sock,answer,strlen(answer),MSG_CONFIRM);
+recv(infos->sock,answer,1,NULL);
 printf("%s",answer);
 
 }

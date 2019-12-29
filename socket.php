@@ -50,7 +50,10 @@ while ( TRUE ) {
 					echo "Succesful ! \n";
 					socket_write ( $c, "1" . $buf );
 				}
-				else echo "Denied ! wrong mail or password; \n";
+				else {
+					echo "Denied ! wrong mail or password; \n";
+					socket_write ( $c, "0" . $buf );
+				}
 			}
 			else {
 				echo $buf."\n";
