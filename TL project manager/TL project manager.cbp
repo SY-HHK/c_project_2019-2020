@@ -35,9 +35,17 @@
 		<Linker>
 			<Add option="`pkg-config gtk+-3.0 --libs`" />
 		</Linker>
+		<Unit filename="graphic_functions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="graphics_functions.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="socket_functions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="socket_functions.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
