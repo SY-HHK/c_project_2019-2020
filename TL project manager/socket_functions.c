@@ -60,7 +60,8 @@ recv(infos->sock,answer,1,NULL);
 if (answer[0] == '1') {
     gtk_window_close (infos->window);
     printf("Good logins !");
-    gtk_widget_show_all (main_window(infos->argc, infos->argv, infos->sock));
+    gtk_widget_show_all(main_window(infos->argc, infos->argv, infos->sock));
+    gtk_main();
 }
 else {
     gtk_main_quit();
@@ -68,6 +69,8 @@ else {
 }
 
 }
+
+
 
 
 void close_socket(SOCKET sock) {

@@ -11,6 +11,8 @@ int main(int argc,char **argv)
     gtk_widget_show_all (connection_window(&argc, &argv, sock));
     gtk_main();
 
+    close_socket(sock);
+
       return 0;
 
 }

@@ -43,6 +43,8 @@ GtkWidget *connection_window(void *argc, void *argv, SOCKET sock) {
         infos.entry_password = entry_password;
         infos.sock = sock;
         infos.window = connection_window;
+        infos.argc = &argc;
+        infos.argv = &argv;
 
       /* Affectation du signal "destroy" à la fonction gtk_main_quit(); pour la */
       /* fermeture de la fenêtre. */

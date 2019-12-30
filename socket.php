@@ -54,6 +54,8 @@ while ( TRUE ) {
 					echo "Denied ! wrong mail or password; \n";
 					socket_write ( $c, "0" );
 				}
+
+				////
 			}
 			else {
 				echo $buf."\n";
