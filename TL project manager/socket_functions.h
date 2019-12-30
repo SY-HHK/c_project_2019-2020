@@ -32,7 +32,10 @@ void close_socket(SOCKET sock);
 //Send logins to the server
   struct connection_infos { GtkWidget *entry_username;
                             GtkWidget *entry_password;
-                            SOCKET sock; };
+                            GtkWidget *window;
+                            SOCKET sock;
+                            void *argc;
+                            void *argv; };
   struct connection_infos infos;
 
 void server_connect(GtkWidget *widget, struct connection_infos *infos);

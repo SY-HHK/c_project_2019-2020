@@ -48,11 +48,11 @@ while ( TRUE ) {
 				$login_accept = $stmt->rowCount();
 				if ($login_accept == 1) {
 					echo "Succesful ! \n";
-					socket_write ( $c, "1" . $buf );
+					socket_write ( $c, "1" );
 				}
 				else {
 					echo "Denied ! wrong mail or password; \n";
-					socket_write ( $c, "0" . $buf );
+					socket_write ( $c, "0" );
 				}
 			}
 			else {

@@ -4,3 +4,7 @@ graphic functions for TL PROJECT MANAGER by HHK
 */
 
 GtkWidget *connection_window(void *argc, void *argv, SOCKET sock);
+
+GtkWidget *main_window(void *argc, void *argv, SOCKET sock);
+
+

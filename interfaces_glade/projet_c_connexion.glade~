@@ -5,8 +5,10 @@
   <object class="GtkDialog" id="window_connexion">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="title" translatable="yes">Connexion</property>
+    <property name="icon_name">Connexion</property>
     <property name="type_hint">dialog</property>
-    <child>
+    <child type="titlebar">
       <placeholder/>
     </child>
     <child internal-child="vbox">
@@ -65,7 +67,7 @@
                 <property name="halign">center</property>
                 <property name="margin_top">25</property>
                 <property name="margin_bottom">10</property>
-                <property name="label" translatable="yes">Nom d'utilisateur</property>
+                <property name="label" translatable="yes">Adresse email</property>
               </object>
               <packing>
                 <property name="expand">False</property>
