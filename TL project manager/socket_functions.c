@@ -1,6 +1,6 @@
 /*
 29/12/2019
-Internet functions using sockets for TL PORJECT MANAGER by HHK
+Internet functions using sockets for TL PORJECT MANAGER by Louis & Tom
 */
 #include "socket_functions.h"
 #include "graphics_functions.h"
@@ -70,7 +70,23 @@ else {
 
 }
 
+void change_email_user(GtkWidget *widget,struct connection_infos *infos) {
 
+char new_logins [40] = "email_user:";
+
+strcat(new_logins,gtk_entry_get_text(GTK_ENTRY(infos->entry_email_user_modify)));
+send(infos->sock,new_logins,strlen(new_logins),NULL);
+
+}
+
+void change_password(GtkWidget *widget,struct connection_infos *infos) {
+
+char new_password [40] = "password:";
+
+strcat(new_password,gtk_entry_get_text(GTK_ENTRY(infos->entry_password_modify)));
+send(infos->sock,new_password,strlen(new_password),NULL);
+
+}
 
 
 void close_socket(SOCKET sock) {

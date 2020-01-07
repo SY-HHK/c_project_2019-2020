@@ -29,7 +29,7 @@
                   <object class="GtkLabel" id="label_username_modify">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Modifier mon pseudo :</property>
+                    <property name="label" translatable="yes">Modifier mon email :</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -38,7 +38,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkEntry" id="entry_username_modify">
+                  <object class="GtkEntry" id="entry_email_user_modify">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="margin_left">90</property>
@@ -218,7 +218,7 @@
                     <property name="can_focus">False</property>
                     <property name="halign">center</property>
                     <property name="margin_bottom">5</property>
-                    <property name="label" translatable="yes">Nouveau Projet</property>
+                    <property name="label" translatable="yes">Projet test</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -227,8 +227,8 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton" id="button1">
-                    <property name="label" translatable="yes">+</property>
+                  <object class="GtkButton" id="button_project">
+                    <property name="label" translatable="yes">TEST</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>

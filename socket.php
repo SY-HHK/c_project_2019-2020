@@ -57,9 +57,18 @@ while ( TRUE ) {
 
 				////
 			}
-			else {
-				echo $buf."\n";
-			}
+			if(strstr($buf,"email_user:")) {
+		$new_email_user = explode("email_user:",$buf);
+		$new_email_user = $new_email_user[0];
+		$stmt = $pdo->prepare("UPDATE USER SET email_user = ? where id_user = 1");
+		$stmt->execute(array($new_email_user));
+		}
+		if(strstr($buf,"password:")) {
+		$new_password = explode("password:",$buf);
+		$new_password = $new_password[0];
+		$stmt = $pdo->prepare("UPDATE USER SET password = ? where id_user = 1");
+		$stmt->execute(array($new_password));
+		}
 		}
 	}
 	// On efface les sockets fermées

@@ -1,3 +1,8 @@
+/*
+29/12/2019
+main.c for TL PORJECT MANAGER by Louis & Tom
+*/
+
 //compiler: `pkg-config gtk+-3.0 --cflags` & linker: `pkg-config gtk+-3.0 --libs`
 //linker : -lmysqlclient
 #include "socket_functions.h"

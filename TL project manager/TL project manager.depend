@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1577727714 source:/home/hhk/Documents/c_project_2019-2020/TL project manager/main.c
+1578362826 source:/home/hhk/Documents/c_project_2019-2020/TL project manager/main.c
 	"socket_functions.h"
 	"graphics_functions.h"
 
@@ -2846,7 +2846,7 @@
 
 1559742361 /usr/include/gtk-3.0/gtk/gtk-autocleanups.h
 
-1577696699 /home/hhk/Documents/c_project_2019-2020/TL project manager/socket_functions.h
+1578373051 /home/hhk/Documents/c_project_2019-2020/TL project manager/socket_functions.h
 	<stdio.h>
 	<stdlib.h>
 	<gtk/gtk.h>
@@ -2857,13 +2857,13 @@
 	<arpa/inet.h>
 	<unistd.h>
 
-1577729675 source:/home/hhk/Documents/c_project_2019-2020/TL project manager/socket_functions.c
+1578362951 source:/home/hhk/Documents/c_project_2019-2020/TL project manager/socket_functions.c
 	"socket_functions.h"
 	"graphics_functions.h"
 
-1577729679 source:/home/hhk/Documents/c_project_2019-2020/TL project manager/graphic_functions.c
+1578373081 source:/home/hhk/Documents/c_project_2019-2020/TL project manager/graphic_functions.c
 	"socket_functions.h"
 	"graphics_functions.h"
 
-1577729467 /home/hhk/Documents/c_project_2019-2020/TL project manager/graphics_functions.h
+1578369117 /home/hhk/Documents/c_project_2019-2020/TL project manager/graphics_functions.h
 
